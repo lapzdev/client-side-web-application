@@ -53,13 +53,29 @@
         </div>
       </div>
     </section>
-    <section class="pruebas">
+    <section class="pruebas tip">
       <h4>Configurando lo aprendido</h4>
-      <form action="http://localhost:8080/send?">
+      <form action="http://localhost:8080/send?" target="_blank">
         <label for=""><b>Nombre:</b>
-          <input type="text" name="nombre"></label>
+          <input type="text" name="nombre" required placeholder="<--Escriba su nombre aquí-->" size="30"></label><br>
+        <label for=""><b>Correo electrónico:</b>
+          <input type="email" name="email" title="Debe rellenar este campo" required autocomplete="true"></label><br>
+        <input type="submit" value="confirmar"> <br>
+        <input type="reset" value="denegar">
 
 
+      </form>
+      <br><br>
+      <hr>
+      <form action="https://api.whatsapp.com/send?" target="_blank">
+
+        <label for=""><b>Teléfono:</b>
+          <input type="tel" name="telef" title="Debe rellenar este campo" required
+            placeholder="--Escriba su número telefónico aquí--" size="30"></label><br><br>
+        <label for=""><b>Texto:</b>
+          <input type="text" name="text" required placeholder="--Escriba texto aquí--" size="30"></label><br><br>
+        <input type="submit" value="confirmar"> <br>
+        <input type="reset" value="denegar">
       </form>
     </section>
   </main>
