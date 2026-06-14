@@ -54,12 +54,30 @@
       </div>
     </section>
     <section class="pruebas tip">
-      <h4>Configurando lo aprendido</h4>
+      <h4>Datos personales</h4>
       <form action="http://localhost:8080/send?" target="_blank">
         <label for=""><b>Nombre:</b>
-          <input type="text" name="nombre" required placeholder="<--Escriba su nombre aquí-->" size="30"></label><br>
+          <input type="text" name="nombre" required placeholder="<--Escriba su nombre aquí-->" size="30"
+            pattern="^[A-Za-z]+$"></label><br>
         <label for=""><b>Correo electrónico:</b>
-          <input type="email" name="email" title="Debe rellenar este campo" required autocomplete="true"></label><br>
+          <input type="email" name="email" title="Debe rellenar este campo" required
+            autocomplete="true"></label><br><br>
+        <label>
+          <input type="radio" name="idioma" value="es" checked>
+          Español
+        </label><br>
+        <label>
+          <input type="radio" name="idioma" value="in">
+          Inglés
+        </label><br>
+        <label>
+          <input type="radio" name="idioma" value="pr">
+          Portugués
+        </label><br>
+        <label>
+          <input type="radio" name="idioma" value="it">
+          Italiano
+        </label><br>
         <input type="submit" value="confirmar"> <br>
         <input type="reset" value="denegar">
 
@@ -67,6 +85,7 @@
       </form>
       <br><br>
       <hr>
+      <h4>Whatssapp</h4><br>
       <form action="https://api.whatsapp.com/send?" target="_blank">
 
         <label for=""><b>Teléfono:</b>
@@ -74,7 +93,16 @@
             placeholder="--Escriba su número telefónico aquí--" size="30"></label><br><br>
         <label for=""><b>Texto:</b>
           <input type="text" name="text" required placeholder="--Escriba texto aquí--" size="30"></label><br><br>
-        <input type="submit" value="confirmar"> <br>
+        <label for="selector"><b>Lenguaje: </b></label><select name="lenguaje" id="selector">
+          <option value="1" selected>Java</option>
+          <option value="2">JavaScript</option>
+          <option value="3">Python</option>
+        </select><br><br>
+        <!-- Para los checkbox y los Radio no es es estrictamente necesario el atributo value ya que al ejecutarse el sistema le pone el valor on que puede ser 1 o true lo cuales son valores positivos.  -->
+        <label>
+          <input type="checkbox" name="terminos" required title="Debe aceptar para continuar">
+          ¿Acepta términos y condiciones?</label><br>
+        <input type="submit" value="confirmar">
         <input type="reset" value="denegar">
       </form>
     </section>
