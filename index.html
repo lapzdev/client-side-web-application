@@ -57,8 +57,9 @@
       <h4>Datos personales</h4>
       <form action="http://localhost:8080/send?" target="_blank">
         <label for=""><b>Nombre:</b>
+          <!-- pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú1-0\s]+$"  esta expresión en el pattern (patrón en español) te permite agregar mayúsculas y minúsculas, Eñes y vocales acentuadas, números del 0 al 9  y espacios en blanco( \s)-->
           <input type="text" name="nombre" required placeholder="<--Escriba su nombre aquí-->" size="30"
-            pattern="^[A-Za-z]+$"></label><br>
+            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú0-9\s]+$"></label><br>
         <label for=""><b>Correo electrónico:</b>
           <input type="email" name="email" title="Debe rellenar este campo" required
             autocomplete="true"></label><br><br>
@@ -104,6 +105,19 @@
           ¿Acepta términos y condiciones?</label><br>
         <input type="submit" value="confirmar">
         <input type="reset" value="denegar">
+      </form>
+    </section><br>
+    <section class="pruebas tip">
+      <h4>Formulario de contacto</h4>
+      <form action="http://formsubmit.co/lapzdev@gmail.com" method="post">
+        <input type="text" name="nombre" placeholder="--Escribe tu nombre--" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$"
+          title="Sólo acepta letras y espacios en blanco"><br>
+        <input type="email" name="correo" placeholder="--Escribe tu correo--"
+          pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" required title="Formato de correo inválido"><br>
+        <!-- Las textarea no aceptan el atributo pattern pero si acewptan el atributo required -->
+
+        <textarea name="comentarios" id="" cols="30" rows="10"></textarea><br>
+        <input type="submit">
       </form>
     </section>
   </main>
