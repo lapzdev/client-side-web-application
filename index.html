@@ -15,19 +15,33 @@
   </header>
 
   <main>
+    <section class="pruebas tip">
+      <h2>Secciones</h2>
+      <ul>
+        <li><a href="#uno">What you've accomplished</a></li>
+        <li><a href="#dos">Try this!</a></li>
+        <li><a href="#tres">Next Steps</a></li>
+        <li><a href="#cuatro">Datos personales</a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+
+      </ul>
+    </section><br><br>
+
     <section class="info-card">
-      <h2>What you've accomplished</h2>
+      <h2 id="uno">What you've accomplished</h2>
       <ul>
         <li>✅ Set up a local development environment</li>
         <li>✅ Installed Node.js dependencies</li>
-        <li>✅ Started a local web server that uses <a href="https://www.npmjs.com/package/http-server"
+        <li>✅ Started a local web server that uses <a class="otra" href="https://www.npmjs.com/package/http-server"
             target="_blank"><code>http-server</code></a></li>
         <li>✅ Previewed a live version of your app</li>
       </ul>
     </section>
 
     <section class="experiment-zone">
-      <h2>Try this!</h2>
+      <h2 id="dos">Try this!</h2>
       <p>Make changes to this HTML file or the CSS file and save. Then refresh your browser to see the changes.</p>
 
       <div class="interactive-demo">
@@ -37,7 +51,7 @@
     </section>
 
     <section class="learning-tips">
-      <h2>Next Steps</h2>
+      <h2 id="tres">Next Steps</h2>
       <div class="tip-grid">
         <div class="tip">
           <h3>🎨 Styling</h3>
@@ -54,7 +68,7 @@
       </div>
     </section>
     <section class="pruebas tip">
-      <h4>Datos personales</h4>
+      <h2 id="cuatro">Datos personales</h2>
       <form action="http://localhost:8080/send?" target="_blank">
         <label for=""><b>Nombre:</b>
           <!-- pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú1-0\s]+$"  esta expresión en el pattern (patrón en español) te permite agregar mayúsculas y minúsculas, Eñes y vocales acentuadas, números del 0 al 9  y espacios en blanco( \s)-->

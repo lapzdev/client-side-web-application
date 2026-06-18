@@ -1,4 +1,7 @@
 /* Reset and base styles */
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -55,9 +58,9 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.info-card h2,
-.experiment-zone h2,
-.learning-tips h2 {
+.info-card,
+.experiment-zone,
+.learning-tips {
   color: #4a5568;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -67,7 +70,12 @@ main {
   list-style: none;
   padding-left: 0;
 }
-
+h2 {
+  color: #667eea;
+  font-size: 30px;
+  font-family: sans-serif;
+  text-shadow: 0.5px 0.5px 0.25rem;
+}
 .info-card li {
   padding: 0.5rem 0;
   font-size: 1.1rem;
@@ -129,7 +137,15 @@ main {
 .tip p {
   color: #4a5568;
 }
-
+a:not(.otra) {
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 2px 2px 0.5rem;
+  background-color: #a8edea;
+}
+ul {
+  list-style-type: none;
+}
 code {
   background: #e2e8f0;
   padding: 2px 6px;
